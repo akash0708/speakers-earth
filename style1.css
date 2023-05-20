@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#speakers{
+    height: 80vh;
+    background-color: #85FFBD;
+background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+
+
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 2rem;
+}
+
+h1{
+    text-align: center;
+}
+
+.speaker-container{
+    padding: 0 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10rem;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 10px auto 50px;
+}
+
+.card {
+    height: 230px;
+    width: 300px;
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    /* overflow: hidden; */
+    /* box-shadow: ; */
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.imgbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-50px);
+    z-index: 99;
+  }
+  
+img {
+    /* width: 100%; */
+    /* max-width: 100%; */
+    width:100%;
+    /* height:100%; */
+    /* max-height: 100%; */
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.content{
+    position: absolute;
+    bottom: 1.5rem;
+    padding: 0px 20px;
+
+    text-align: center;
+    transform: translateY(-40px);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.card:hover{
+    height: 275px;
+}
+.card:hover .content{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.fa-brands{
+    margin-top: 5px;
+}
+
+.card:hover .content h2{
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+}
+.card:hover .content i {
+    padding: 0.5rem;
+    transition: all 0.3s;
+}
+.card:hover .content .fa-linkedin {
+    padding: 0.5rem;
+    transition: all 0.3s;
+    margin-left: 1.25rem;
+}
+.card:hover .content i:hover{
+    transform: translateY(-2px);
+    color: rgb(5, 161, 133);
+}
+
+/* smaller screens */
+@media (max-width: 850px){
+    #speakers{
+        height: 100vh;
+        background-color: #85FFBD;
+    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    
+    
+        font-family: 'Montserrat', sans-serif;
+        padding-top: 2rem;
+    }
+    
+    h1{
+        text-align: center;
+        
+    }
+    
+    .speaker-container{
+        padding: 0 5rem;
+        /* display: flex;
+        flex-wrap: wrap; */
+    
+        display: grid;
+        grid-template-columns: 360px;
+        column-gap: 10rem;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        margin: 0px auto 10px;
+    }
+    
+    .card {
+        height: 120px;
+        width: 300px;
+        position: relative;
+        background-color: white;
+        border-radius: 10px;
+        /* overflow: hidden; */
+        /* box-shadow: ; */
+        padding: 1rem 2rem;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    
+    .imgbox {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-50px);
+        z-index: 99;
+      }
+      
+    img {
+        /* width: 100%; */
+        /* max-width: 100%; */
+        width:100%;
+        /* height:100%; */
+        /* max-height: 100%; */
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    }
+    
+    .content{
+        position: absolute;
+        bottom: 1.5rem;
+        padding: 0px 20px;
+    
+        text-align: center;
+        transform: translateY(-40px);
+        opacity: 0;
+        transition: 0.3s;
+    }
+    
+    .card:hover{
+        height: 275px;
+    }
+    .card:hover .content{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    
+    .fa-brands{
+        margin-top: 5px;
+    }
+    
+    .card:hover .content h2{
+        margin-left: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    .card:hover .content i {
+        padding: 0.5rem;
+        transition: all 0.3s;
+    }
+    .card:hover .content .fa-linkedin {
+        padding: 0.5rem;
+        transition: all 0.3s;
+        margin-left: 1.25rem;
+    }
+    .card:hover .content i:hover{
+        transform: translateY(-2px);
+        color: rgb(5, 161, 133);
+    }
+}
